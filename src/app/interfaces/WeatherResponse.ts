@@ -6,6 +6,7 @@ export interface WeatherResponse{
     dt : number,
     hora :string;
     weather :Weather [],
+    timezone:{},
     main : {
         temp : number,
         feels_like : number,

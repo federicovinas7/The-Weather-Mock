@@ -3,6 +3,7 @@ import { Weather } from "./WeatherResponse"
 export interface WeatherHourlyResponse{
 
     timezone_offset :number,
+    timezone:string,
     hourly : Hourly []
     weather :Weather[],
     
@@ -19,6 +20,9 @@ export interface WeatherHourlyResponse{
         visibility: number,
         wind_speed: number,
         wind_deg: number,
+        rain:{
+            '1h':number,
+        },
        
         
       }
@@ -44,7 +48,9 @@ export interface Hourly{
     humidity : number,
     weather : Weather[],
     pop : number,
-    rain : {},
+    rain : {
+        '1h':number
+    },
     hora : string,
     image : string,
 

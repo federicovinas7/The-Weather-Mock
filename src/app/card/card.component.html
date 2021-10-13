@@ -1,14 +1,14 @@
 
 <div class="card" >
     <div class="location">
-        <div class="city">{{weather.name}}, Buenos Aires, Argentina Weather</div>
+        <div class="city">{{weather.name}}, {{weatherHourly.timezone.split("/").slice(1,4).reverse().toString().replace("_"," ").replace(",",", ")}}   Weather</div>
         <div id ="hour-now"class="time-to">As of {{weather.hora}}</div>
     </div>
     <div class="conditions">
         <div class="container">
             <div class="number">{{weather.main.temp.toFixed(0)}}°</div>
             <div class="description" id="description">{{weather.weather[0].description}}</div>
-            <div class="rain-prob"></div>
+           
         </div>
         <div class="container">
             <div class="icon">
@@ -18,4 +18,5 @@
         </div>
 
     </div>
+    <div class="rain-prob">{{(weatherHourly.hourly[0].pop*100).toFixed(0)}}% chance of rain until {{weatherHourly.hourly[1].hora}}</div>
 </div>

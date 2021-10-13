@@ -19,6 +19,7 @@
     --textDefault : #2b2b2b;
     --medium-font-weight:600;
     --high-font-weight:700;
+    --card-subtitle-color:#ddd;
 }
 *{
     box-sizing: border-box;

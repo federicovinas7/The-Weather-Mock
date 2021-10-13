@@ -22,6 +22,7 @@ export class AppComponent {
     'heavy intensity rain' : 'rain',
     'shower rain' : 'showers',
     'light rain' : 'light-rain',
+    'light intensity drizzle':'light-rain',
     'rain' : 'heavy-rain',
     'thunderstorm' : 'thunderstorm',
     'thunderstorm with heavy rain': 'thunderstorm',
@@ -55,7 +56,7 @@ export class AppComponent {
 
   getWeatherData(city?:string){
       
-    city === undefined || city === null ? city = 'Mar del Plata' : city = city;
+      city === undefined || city === null ? city = 'Mar del Plata' : city;
       this.weatherService.getLocalWeather(city).subscribe(data=>{
       this.weatherData = data;
       this.lat = data.coord.lat;
@@ -63,21 +64,25 @@ export class AppComponent {
      
       
       this.getWeatherDetails(data.coord.lat,data.coord.lon);
-      this.weatherData.hora =this.timeConverter(this.weatherData.dt);
+      this.weatherData.hora = this.timeConverter(this.weatherData.dt);
       this.switchImage(data.weather[0].description);
-      let hourNow = this.weatherData.hora;
-      if(parseInt(hourNow) >19 || parseInt(hourNow) >=0 && parseInt(hourNow)<6){
-        let body = document.querySelector('body') as HTMLElement;
-        body.classList.add('background-night');
-      }
-      if(parseInt(hourNow) >=13 && parseInt(hourNow) <19){
-        let body = document.querySelector('body') as HTMLElement;
-        body.classList.add('background-afternoon');
-      }
-   
+
+      let hourNow = parseInt(this.weatherData.hora);
+      this.setBackground(hourNow);
+      
     }); 
    }
 
+
+   setBackground(hour:number){
+    let body = document.querySelector('body') as HTMLElement;
+
+    if(hour > 19 || hour >= 0 && hour < 6)
+      body.classList.add('background-night');
+    
+    if(hour >= 13 && hour < 19) 
+      body.classList.add('background-afternoon');
+   }
     
   getWeatherDetails(pLat : number, pLon:number){
       
@@ -124,6 +129,7 @@ switchImage(paramDescprition : string){
 
     
   let image = document.getElementById("image") as HTMLElement;
+  image.setAttribute('class','image');
  
   switch (paramDescprition){
 
