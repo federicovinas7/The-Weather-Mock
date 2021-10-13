@@ -1,0 +1,79 @@
+<div class="today-card-container">
+    <div class="title">Weather Today In {{weather.name}},Argentina</div>
+    <div class="main-info-container">
+        <div class="sensation">
+            <div class="temp">{{weather.main.temp.toFixed(0)}}°</div>
+            <div class="subtitle">Sensation</div>
+        </div>
+        <div class="sunset-sunrise-logo">
+            <div class="logo"></div>
+            <div class="sunset-sunrise-container">
+                <div class="sunrise">
+                    <div class="arrow-up-logo"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="sunset">
+                    <div class="arrow-down-logo"></div>
+                    <div class="time"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="details-container">
+        <div class="flexbox-container">
+            <div class="max-min ">
+                <div class="max-min-icon icon"></div>
+                <div class="description">High / Low</div>
+                <div class="value">{{weather.main.temp_max.toFixed(0)}}°/{{weather.main.temp_min.toFixed(0)}}°</div>
+            </div>
+            <div class="wind">
+                <div class="wind-icon icon"></div>
+                <div class="description">Wind</div>
+                <div class="wind-container">
+                    <div class="wind-direction-icon icon"></div>
+                    <div class="value">{{weather.wind.speed}}km/h</div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="flexbox-container">
+            <div class="humidity">
+                <div class="humidity-icon icon"></div>
+                <div class="description">Humidity</div>
+                <div class="value">{{weather.main.humidity}}%</div>
+            </div>
+            <div class="condensation">
+                <div class="condensation-icon icon"></div>
+                <div class="description">Condensation</div>
+                <div class="value">{{weatherHourly.daily[0].dew_point}}</div>
+            </div>
+        </div>
+        <div class="flexbox-container">
+            <div class="pressure">
+                <div class="pressure-icon icon"></div>
+                <div class="description">Pressure</div>
+                <div class="arrow-up"></div>
+                <div class="value">{{weather.main.pressure}}</div>
+            </div>
+            <div class="uv-index">
+                <div class="uv-index-icon icon"></div>
+                <div class="description">UV Index</div>
+                <div class="value">{{weatherHourly.current.uvi}} of 10</div>
+            </div>
+        </div>
+        <div class="flexbox-container">
+            <div class="visibility">
+                <div class="visibility-icon icon"></div>
+                <div class="description">Visibility</div>
+                <div class="value">{{weather.visibility}} mts</div>
+            </div>
+            <div class="moon-phase">
+                <div class="moon-phase-icon icon"></div>
+                <div class="description">Moon Phase</div>
+                <div class="value">{{setMoonPhase(weatherHourly.daily[0].moon_phase)}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+

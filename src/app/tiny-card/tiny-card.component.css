@@ -1,0 +1,200 @@
+.tinycard
+{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 250px;
+    padding: 10px;
+
+  
+ 
+    
+}
+.hour,.temperature,.details{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    font-family: var(--font-type);
+    font-size: 1.2em;
+}
+.hour{
+    font-size: 20px;
+}
+
+.temperature{
+    color: #11f;
+    font-size: 35px;
+    padding: 15px 0 0 0;
+}
+.tiny-card-icon{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.precipitation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/drop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  
+}
+
+
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+   
+}
+.tinycard:nth-child(odd){
+    border-right: 1px solid;
+    border-image:var(--border-image);
+}
+
+.card-list:first-child{
+    font-weight: var(--high-font-weight)
+}
+.card-list:nth-child(5){
+border-right: none;
+border-image: none;
+}
+
+
+
+
+
+
+
+
+/* Weather Icons */
+
+.clear{
+    background:url("../images/clear.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  
+
+}
+
+.clear-night{
+    background:url("../images/clear-night.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  
+
+}
+
+
+.cloudy{
+    background:url("../images/cloudy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.cloudy-night{
+    background:url("../images/cloudy-night.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.very-cloudy{
+    background:url("../images/very-cloudy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.very-cloudy-night{
+    background:url("../images/mostly-cloudy-night.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.mostly-sunny{
+    background:url("../images/mostly-sunny.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.mostly-cloudy{
+    background:url("../images/mostly-cloudy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.mostly-cloudy-night{
+    background:url("../images/mostly-cloudy-night.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rain{
+    background:url("../images/showers.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.showers{
+    background:url("../images/showers.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.light-rain{
+    background:url("../images/light-rain.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.light-rain-night{
+    background:url("../images/scattered-showers-night.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.thunderstorm{
+    background:url("../images/thunderstorm.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.snow{
+    background:url("../images/snow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.fog{
+    background:url("../images/fog.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}

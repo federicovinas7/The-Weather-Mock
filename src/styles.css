@@ -1,1 +1,46 @@
+
 /* You can add global styles to this file, and also import other style files */
+/* -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; */
+/* 'Barlow', sans-serif; */
+:root{
+    --font-type:  -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --background-day: linear-gradient(#046f94 9%,#65b7c6);
+    --background-afternoon: linear-gradient(#6e3f98 9%,#d6ab97);
+    --background-night: linear-gradient(#113076 9%,#157fba);
+    --background-card:rgba(255,255,255,.1);
+    --shadow-card:2px -2px 5px #444444;
+    --card-border-radius : 10px;
+    --card-height : 300px;
+    --card-width : 790px;
+    --card-title-font-size : 25px;
+    --card-subtitle-font-size :20px;
+    --border-image: linear-gradient(180deg,hsla(0,0%,87.1%,0) 0,#dedede 25%,#dedede 70%,hsla(0,0%,87.1%,0) 85%,hsla(0,0%,87.1%,0)) 1 100%; 
+    --border-image-horizontal :linear-gradient(to right,hsla(0,0%,87.1%,0) 0,#dedede 25%,#dedede 70%,hsla(0,0%,87.1%,0) 85%,hsla(0,0%,87.1%,0)) 1 100%;
+    --textDefault : #2b2b2b;
+    --medium-font-weight:600;
+    --high-font-weight:700;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+
+    background-image: var(--background-day);
+    background-attachment: fixed;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+}
+.background-day{
+    background-image: var(--background-day);
+}
+.background-night{
+    background-image: var(--background-night);
+}
+.background-afternoon{
+    background-image: var(--background-afternoon);
+}
+

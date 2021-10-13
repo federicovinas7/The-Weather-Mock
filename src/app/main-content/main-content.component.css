@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+}
+
+.main-content{
+
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: 100vmax;
+    width:100%;
+
+}

@@ -1,0 +1,21 @@
+
+<div class="card" >
+    <div class="location">
+        <div class="city">{{weather.name}}, Buenos Aires, Argentina Weather</div>
+        <div id ="hour-now"class="time-to">As of {{weather.hora}}</div>
+    </div>
+    <div class="conditions">
+        <div class="container">
+            <div class="number">{{weather.main.temp.toFixed(0)}}°</div>
+            <div class="description" id="description">{{weather.weather[0].description}}</div>
+            <div class="rain-prob"></div>
+        </div>
+        <div class="container">
+            <div class="icon">
+                <div id="image" class="image"></div>
+            </div>
+            <div class="details">{{weather.main.temp_max.toFixed(0)}}°/{{weather.main.temp_min.toFixed(0)}}°</div>
+        </div>
+
+    </div>
+</div>

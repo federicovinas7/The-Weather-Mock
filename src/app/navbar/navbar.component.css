@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    
+}
+.navbar{
+    display: flex;
+    height: 80px;
+    background-color: #05336b;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.main-menu{
+
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 80%;
+    
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    
+    height: 100%;
+   flex: .2;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #fff;
+   word-wrap: break-word;
+   font-size: 1.3em;
+   justify-content: center;
+   
+
+}
+
+.menu{
+
+    display: flex;
+    height: 100%;
+    flex: .6;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 70%;
+    flex: .7;
+    border-radius: 25px;
+    background-color: #375c89;
+    border: none;
+    
+}
+
+.search-input{
+   
+    
+    height: 100%;
+    width: 100%;
+    background-color: #375c89;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;   
+    border: none;
+    text-indent: 20px;
+    outline: none;
+    color: white;
+    text-indent: 30px;
+    font-family:var(--font-type);
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.container-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.search-icon{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    color: white;
+    padding-right: 10px;
+}
+
+::placeholder{
+    color: white;
+    
+    
+    text-indent: 30px;
+}
+
+.container-menu{
+
+    display: flex;
+    background-color: transparent;
+    flex: 0.2;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.world-logo{
+     background-image: url("../images/globe.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     width: 60%;
+     height: 60%;
+     align-content: flex-start;
+     
+}
+
+.dropdown{
+
+    justify-self: center;
+    border: 1px solid white;
+    width: 90%;
+    height: 80%;
+}

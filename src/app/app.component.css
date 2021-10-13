@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+   
+}
+html{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+img{
+    background:black;
+    width: 100px;
+    height: 100px;
+}
+
+
+
